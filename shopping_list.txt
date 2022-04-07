@@ -1,5 +1,5 @@
-eggs
-bread
-milk
-soup
-banana
+eggs x 7
+bread x 2
+milk x 1
+soup x 3
+banana x 2
