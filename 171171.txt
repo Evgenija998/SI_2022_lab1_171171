@@ -64,10 +64,13 @@ CONFLICT
 vi shopping_list.txt -> отварање на текстуалната датотека shopping_list.txt
 $ git add shopping_list.txt -> вклучување на текстуалната датотека shopping_list.txt за промени
 $ git commit -m 'Fixed Conflict' -> пуштање на порака после извршените промени
-
 $ git checkout master -> префрлање на гранката master
 $ git merge branch2 -> спојување на гранката branch2 со master
 $ git push origin master -> пуштање на промените од master на github
+
+$ git add 171171.txt -> вклучување на текстуалната датотека 171171.txt за промени
+$ git commit -m 'Add docs' -> пуштање на порака после извршените промени
+$ git push -> зачувување на последните промени на гранката
 
 $ git checkout master -> префрлање на гранката master
 $ git pull -> земање на промени од гранката
@@ -78,3 +81,5 @@ $ git checkout master -> префрлање на гранката master
 $ git pull -> земање на промени од гранката
 $ git checkout branch2 -> префрлање на гранката branch2
 $ git merge master -> синхронизација на branch2 со master
+
+
