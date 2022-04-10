@@ -1,5 +1,6 @@
 eggs x 7
 bread x 4
 milk x 1
-soup x 3
-banana x 7
+carrots x 3
+banana x 2
+chocolate x 4
