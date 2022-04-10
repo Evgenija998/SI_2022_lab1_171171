@@ -1,0 +1,80 @@
+$ git init -> иницијализација на фолдерот SI
+$ git clone <link> -> клонирање на репозиториумот локално
+
+$ git add shopping_list.txt -> вклучување на текстуалната датотека shopping_list.txt за промени
+$ git commit -m 'Add 5 items to the shopping list' -> пуштање на порака после извршените промени
+$ git add shopping_list.txt -> вклучување на текстуалната датотека shopping_list.txt за промени
+$ git commit -m 'Add quantities to the items'-> пуштање на порака после извршените промени
+$ git branch branch1 -> креирање на branch1
+$ git branch branch2 -> креирање на branch2
+
+( Синхронизација на branch1 со master )
+$ git checkout master -> префрлање на гранката master
+$ git pull -> земање на промени од гранката
+$ git checkout branch1 -> префрлање на гранката branch1
+$ git merge master -> синхронизација на branch1 со master
+
+( Синхронизација на branch2 со master )
+$ git checkout master -> префрлање на гранката master
+$ git pull -> земање на промени од гранката
+$ git checkout branch2 -> префрлање на гранката branch2
+$ git merge master -> синхронизација на branch2 со master
+
+$ git checkout branch1 -> префрлање на гранката branch1
+vi shopping_list.txt -> отварање на текстуалната датотека shopping_list.txt
+$ git add shopping_list.txt -> вклучување на текстуалната датотека shopping_list.txt за промени
+$ git commit -m 'Change quantity of item #5' -> пуштање на порака после извршените промени
+
+$ git checkout master -> префрлање на гранката master
+vi shopping_list.txt -> отварање на текстуалната датотека shopping_list.txt
+$ git add shopping_list.txt -> вклучување на текстуалната датотека shopping_list.txt за промени
+$ git commit -m 'Change quantity of item #2' -> пуштање на порака после извршените промени
+
+( Синхронизација на branch1 со master )
+$ git checkout master -> префрлање на гранката master
+$ git pull -> земање на промени од гранката
+$ git checkout branch1 -> префрлање на гранката branch1
+$ git merge master -> синхронизација на branch1 со master
+
+( Синхронизација на branch2 со master )
+$ git checkout master -> префрлање на гранката master
+$ git pull -> земање на промени од гранката
+$ git checkout branch2 -> префрлање на гранката branch2
+$ git merge master -> синхронизација на branch2 со master
+
+$ git checkout branch2 -> префрлање на гранката branch2
+vi shopping_list.txt -> отварање на текстуалната датотека shopping_list.txt
+$ git add shopping_list.txt -> вклучување на текстуалната датотека shopping_list.txt за промени
+$ git commit -m 'Modify item #4' -> пуштање на порака после извршените промени
+
+vi shopping_list.txt -> отварање на текстуалната датотека shopping_list.txt
+$ git add shopping_list.txt -> вклучување на текстуалната датотека shopping_list.txt за промени
+$ git commit --amend -m 'Modify item #4 and add item #6' -> додавање на нова ставка со промена на последниот commit (--amend command)
+
+$ git checkout master -> префрлање на гранката master
+$ git merge branch1 -> спојување на гранката branch1 со master
+$ git push origin master -> пуштање на промените од master на github
+
+$ git merge branch2 -> спојување на гранката branch2 со master
+$ git push origin master -> пуштање на промените од master на github
+
+CONFLICT 
+- По спојување на гранката branch2 со master гранката се случи конфликт. Во спојувањето ја отворив текстуалната датотека shopping_list.txt и ги избришав линиите ( линиите од <<<<< HEAD до ====== ) од претходниот commit кој што веќе е на origin master (github) со што ги извршив следните команди:
+
+vi shopping_list.txt -> отварање на текстуалната датотека shopping_list.txt
+$ git add shopping_list.txt -> вклучување на текстуалната датотека shopping_list.txt за промени
+$ git commit -m 'Fixed Conflict' -> пуштање на порака после извршените промени
+
+$ git checkout master -> префрлање на гранката master
+$ git merge branch2 -> спојување на гранката branch2 со master
+$ git push origin master -> пуштање на промените од master на github
+
+$ git checkout master -> префрлање на гранката master
+$ git pull -> земање на промени од гранката
+$ git checkout branch1 -> префрлање на гранката branch1
+$ git merge master -> синхронизација на branch1 со master
+
+$ git checkout master -> префрлање на гранката master
+$ git pull -> земање на промени од гранката
+$ git checkout branch2 -> префрлање на гранката branch2
+$ git merge master -> синхронизација на branch2 со master
